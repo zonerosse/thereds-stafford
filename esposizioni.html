@@ -1,27 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEAT - Palmares Esposizioni | TheReds Stafford</title>
-    <meta name="description" content="I successi espositivi di HEAT, Campione Italiano e Internazionale Staffordshire Bull Terrier. Crufts, Romagna Winner, National Terrier Club e molto altro.">
-    <meta name="keywords" content="heat staffordshire bull terrier, campione italiano staffy, crufts staffy, esposizioni staffordshire bull terrier">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="HEAT - Palmares Esposizioni | TheReds Stafford">
-    <meta property="og:description" content="I successi espositivi di HEAT, Campione Italiano e Internazionale Staffordshire Bull Terrier.">
-    <meta property="og:image" content="images/image7.jpeg">
-    <meta property="og:url" content="https://www.thereds-stafford.com/esposizioni-heat.html">
-    <meta property="og:type" content="website">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.thereds-stafford.com/esposizioni-heat.html">
-
-    <!-- Preconnect fonts -->
+    <title>Esposizioni HEAT - Palmares Campione Italiano | TheReds Stafford</title>
+    <meta name="description" content="Palmares completo di HEAT (Bullbrothers Hott as Hell): Campione Italiano, Crufts, Romagna Winner, National Terrier Club. Staffordshire Bull Terrier campione.">
+    <link rel="canonical" href="https://www.thereds-stafford.com/esposizioni.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --color-bg: #1a1512;
@@ -32,7 +19,6 @@
             --color-rust-light: #d4735a;
             --color-rust-dark: #a34830;
             --color-gold: #d4a853;
-            --color-text: #f5f0e8;
             --color-text-muted: #a89b8c;
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Source Sans 3', -apple-system, sans-serif;
@@ -42,776 +28,247 @@
             --space-lg: 4rem;
             --space-xl: 6rem;
             --space-2xl: 10rem;
-            --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-smooth: 0.4s ease;
         }
-
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-body);
-            font-weight: 400;
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 1000;
-        }
+        body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-cream); line-height: 1.7; }
         h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
-        h1 { font-size: clamp(2.2rem, 5vw, 4rem); }
-        h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
-        h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+        h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); }
+        h3 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
         p { font-size: 1.05rem; color: var(--color-cream-muted); }
         a { color: inherit; text-decoration: none; }
         img { max-width: 100%; height: auto; display: block; }
-        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
 
-        /* HEADER */
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: var(--space-sm) 0;
-            background-color: rgba(26, 21, 18, 0.95);
-            backdrop-filter: blur(10px);
-        }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: var(--space-sm) 0; background: rgba(26,21,18,0.95); backdrop-filter: blur(10px); }
         header .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; align-items: center; gap: var(--space-sm); }
-        .logo-icon {
-            width: 50px; height: 50px;
-            background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark));
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-display);
-            font-weight: 700; font-size: 1.2rem;
-            color: var(--color-cream);
-        }
-        .logo-text { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; letter-spacing: 0.02em; }
+        .logo-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
+        .logo-text { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
         .logo-text span { color: var(--color-rust-light); }
         nav ul { display: flex; gap: var(--space-md); list-style: none; }
-        nav a {
-            font-size: 0.9rem; font-weight: 500;
-            letter-spacing: 0.05em; text-transform: uppercase;
-            color: var(--color-cream-muted);
-            position: relative; padding: var(--space-xs) 0;
-            transition: color var(--transition-smooth);
-        }
-        nav a::after {
-            content: '';
-            position: absolute; bottom: 0; left: 0;
-            width: 0; height: 2px;
-            background: var(--color-rust);
-            transition: width var(--transition-smooth);
-        }
-        nav a:hover { color: var(--color-cream); }
-        nav a:hover::after { width: 100%; }
-        .menu-toggle {
-            display: none;
-            flex-direction: column; gap: 5px;
-            background: none; border: none; cursor: pointer;
-            padding: var(--space-xs);
-        }
-        .menu-toggle span { width: 28px; height: 2px; background: var(--color-cream); transition: var(--transition-smooth); }
+        nav a { font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-cream-muted); transition: color var(--transition-smooth); }
+        nav a:hover, nav a.active { color: var(--color-cream); }
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: var(--space-xs); }
+        .menu-toggle span { width: 28px; height: 2px; background: var(--color-cream); }
 
-        /* HERO EXPO */
-        .hero-expo {
-            min-height: 70vh;
-            display: flex; align-items: center;
-            position: relative; overflow: hidden;
-            padding-top: 120px;
-            padding-bottom: var(--space-xl);
-        }
-        .hero-expo::before {
-            content: '';
-            position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse at 30% 70%, rgba(212, 168, 83, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 30%, rgba(196, 92, 62, 0.1) 0%, transparent 40%),
-                linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
-            z-index: -1;
-        }
-        .hero-expo-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-        .hero-expo-text { opacity: 0; animation: fadeSlideUp 1s ease forwards; animation-delay: 0.3s; }
-        .hero-expo-badge {
-            display: inline-flex; align-items: center; gap: var(--space-xs);
-            background: rgba(212, 168, 83, 0.15);
-            border: 1px solid rgba(212, 168, 83, 0.3);
-            padding: var(--space-xs) var(--space-sm);
-            border-radius: 100px;
-            font-size: 0.8rem; font-weight: 500;
-            letter-spacing: 0.1em; text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: var(--space-md);
-        }
-        .hero-expo-badge::before {
-            content: '🏆';
-            font-size: 1rem;
-        }
-        .hero-expo h1 { margin-bottom: var(--space-md); color: var(--color-cream); }
-        .hero-expo h1 em { color: var(--color-gold); font-style: italic; }
-        .hero-expo-subtitle {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            color: var(--color-rust-light);
-            font-style: italic;
-            margin-bottom: var(--space-md);
-        }
-        .hero-expo-description { font-size: 1.1rem; margin-bottom: var(--space-lg); max-width: 500px; }
-        .hero-expo-image {
-            position: relative;
-            opacity: 0;
-            animation: fadeSlideLeft 1s ease forwards;
-            animation-delay: 0.6s;
-        }
-        .hero-expo-image-frame {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(212, 168, 83, 0.3);
-        }
-        .hero-expo-image img { width: 100%; height: auto; display: block; }
-        .crufts-badge {
-            position: absolute;
-            bottom: var(--space-md);
-            left: var(--space-md);
-            background: linear-gradient(135deg, #1a5f2a, #0d3d16);
-            color: white;
-            padding: var(--space-sm) var(--space-md);
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            letter-spacing: 0.05em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .crufts-badge img {
-            height: 24px;
-            width: auto;
-        }
+        .hero-small { padding: 140px 0 var(--space-xl); background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%); text-align: center; }
+        .hero-small h1 { margin-bottom: var(--space-sm); }
+        .hero-small h1 em { color: var(--color-gold); font-style: italic; }
 
-        /* TITOLI SECTION */
-        .titoli {
-            padding: var(--space-xl) 0;
-            background: var(--color-bg-warm);
-            position: relative;
-        }
-        .titoli::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-        }
         .section-header { text-align: center; margin-bottom: var(--space-xl); }
-        .section-label {
-            font-size: 0.8rem; font-weight: 600;
-            letter-spacing: 0.2em; text-transform: uppercase;
-            color: var(--color-rust);
-            margin-bottom: var(--space-sm);
-        }
-        .section-header h2 { color: var(--color-cream); }
-        .titoli-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-lg);
-        }
-        .titoli-category {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            padding: var(--space-lg);
-            border: 1px solid rgba(212, 168, 83, 0.15);
-        }
-        .titoli-category h3 {
-            color: var(--color-gold);
-            margin-bottom: var(--space-md);
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        .titoli-category h3 span {
-            font-size: 1.5rem;
-        }
-        .titoli-list {
-            list-style: none;
-        }
-        .titoli-list li {
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid rgba(212, 168, 83, 0.1);
-            color: var(--color-cream);
-            font-size: 1.05rem;
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        .titoli-list li:last-child {
-            border-bottom: none;
-        }
-        .titoli-list li::before {
-            content: '✓';
-            color: var(--color-gold);
-            font-weight: bold;
-        }
+        .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-rust); margin-bottom: var(--space-sm); }
 
-        /* GALLERY */
-        .gallery {
-            padding: var(--space-2xl) 0;
-            background: var(--color-bg);
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-        }
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .gallery-item.featured {
-            grid-column: span 2;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        .gallery-item-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: var(--space-md);
-            background: linear-gradient(0deg, rgba(26, 21, 18, 0.9) 0%, transparent 100%);
-        }
-        .gallery-item-overlay h4 {
-            font-family: var(--font-display);
-            color: var(--color-cream);
-            font-size: 1.1rem;
-            margin-bottom: 4px;
-        }
-        .gallery-item-overlay p {
-            font-size: 0.9rem;
-            color: var(--color-gold);
-            margin: 0;
-        }
+        .champion-intro { padding: var(--space-xl) 0; background: var(--color-bg); }
+        .champion-intro-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-xl); align-items: center; }
+        .champion-intro-image { border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.4); border: 2px solid rgba(212,168,83,0.3); }
+        .champion-intro-text h2 { margin-bottom: var(--space-md); }
+        .champion-intro-text h2 em { color: var(--color-gold); }
+        .champion-info { margin-top: var(--space-md); padding: var(--space-md); background: rgba(0,0,0,0.2); border-radius: 8px; border-left: 3px solid var(--color-gold); }
+        .champion-info p { margin: 0; font-size: 0.95rem; }
+        .champion-info strong { color: var(--color-cream); }
 
-        /* HIGHLIGHTS */
-        .highlights {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .highlights::before {
-            content: '🏆';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30rem;
-            opacity: 0.03;
-            pointer-events: none;
-        }
-        .highlights-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-        .highlight-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 168, 83, 0.2);
-        }
-        .highlight-card-image {
-            overflow: hidden;
-        }
-        .highlight-card-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .highlight-card-content {
-            padding: var(--space-lg);
-        }
-        .highlight-card-content h3 {
-            color: var(--color-cream);
-            margin-bottom: var(--space-sm);
-        }
-        .highlight-card-content p {
-            margin-bottom: var(--space-md);
-        }
-        .highlight-tag {
-            display: inline-block;
-            background: linear-gradient(135deg, rgba(212, 168, 83, 0.2), rgba(212, 168, 83, 0.1));
-            border: 1px solid rgba(212, 168, 83, 0.4);
-            padding: 6px 14px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            color: var(--color-gold);
-            font-weight: 500;
-        }
+        .titles-section { padding: var(--space-2xl) 0; background: var(--color-bg-warm); }
+        .titles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+        .title-card { padding: var(--space-md); background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px solid rgba(212,168,83,0.2); display: flex; align-items: center; gap: var(--space-sm); transition: all var(--transition-smooth); }
+        .title-card:hover { border-color: var(--color-gold); transform: translateY(-4px); }
+        .title-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--color-gold), #b8942f); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .title-text h3 { color: var(--color-cream); margin-bottom: 4px; font-size: 1.1rem; }
+        .title-text p { margin: 0; font-size: 0.9rem; }
 
-        /* CTA */
-        .cta {
-            padding: var(--space-xl) 0;
-            background: var(--color-bg-warm);
-            text-align: center;
-        }
-        .cta h2 {
-            color: var(--color-cream);
-            margin-bottom: var(--space-md);
-        }
-        .cta p {
-            max-width: 600px;
-            margin: 0 auto var(--space-lg);
-        }
-        .btn {
-            display: inline-flex; align-items: center; gap: var(--space-xs);
-            padding: var(--space-sm) var(--space-md);
-            font-family: var(--font-body);
-            font-size: 0.95rem; font-weight: 600;
-            letter-spacing: 0.03em;
-            border-radius: 4px; cursor: pointer;
-            transition: all var(--transition-smooth);
-            border: none;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark));
-            color: var(--color-cream);
-            box-shadow: 0 4px 20px rgba(196, 92, 62, 0.3);
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(196, 92, 62, 0.4); }
-        .btn-outline {
-            background: transparent;
-            color: var(--color-cream);
-            border: 1px solid rgba(245, 240, 232, 0.3);
-            margin-left: var(--space-sm);
-        }
-        .btn-outline:hover { background: rgba(245, 240, 232, 0.05); border-color: rgba(245, 240, 232, 0.5); }
+        .exhibitions-section { padding: var(--space-2xl) 0; background: var(--color-bg); }
+        .exhibitions-list { max-width: 800px; margin: 0 auto; }
+        .exhibition-item { padding: var(--space-md); background: var(--color-bg-warm); border-radius: 12px; margin-bottom: var(--space-sm); border-left: 4px solid var(--color-rust); }
+        .exhibition-item h3 { color: var(--color-cream); margin-bottom: var(--space-xs); font-size: 1.1rem; }
+        .exhibition-item p { margin: 0; font-size: 0.95rem; }
+        .exhibition-item .result { color: var(--color-gold); font-weight: 600; }
 
-        /* FOOTER */
-        footer {
-            padding: var(--space-lg) 0;
-            background: var(--color-bg);
-            border-top: 1px solid rgba(196, 92, 62, 0.1);
-        }
+        .cta-section { padding: var(--space-xl) 0; background: linear-gradient(180deg, var(--color-bg-warm), var(--color-bg)); text-align: center; }
+        .cta-buttons { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md); }
+        .btn { display: inline-flex; align-items: center; gap: var(--space-xs); padding: var(--space-sm) var(--space-md); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; border-radius: 6px; cursor: pointer; transition: all var(--transition-smooth); border: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark)); color: var(--color-cream); box-shadow: 0 4px 20px rgba(196,92,62,0.3); }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: var(--color-cream); border: 1px solid rgba(245,240,232,0.3); }
+        .btn-gold { background: linear-gradient(135deg, var(--color-gold), #b8942f); color: var(--color-bg); }
+
+        footer { padding: var(--space-lg) 0; background: var(--color-bg-warm); border-top: 1px solid rgba(196,92,62,0.1); }
         .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); }
         .footer-text { font-size: 0.9rem; color: var(--color-text-muted); }
         .footer-text strong { color: var(--color-cream); }
         .footer-links { display: flex; gap: var(--space-md); }
-        .footer-links a { font-size: 0.85rem; color: var(--color-text-muted); transition: color var(--transition-smooth); }
-        .footer-links a:hover { color: var(--color-rust-light); }
+        .footer-links a { font-size: 0.85rem; color: var(--color-text-muted); }
 
-        /* ANIMATIONS */
-        @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeSlideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+        .mobile-menu { position: fixed; inset: 0; background: var(--color-bg); z-index: 99; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all var(--transition-smooth); }
+        .mobile-menu.active { opacity: 1; visibility: visible; }
+        .mobile-menu ul { list-style: none; text-align: center; }
+        .mobile-menu li { margin-bottom: var(--space-md); }
+        .mobile-menu a { font-family: var(--font-display); font-size: 2rem; }
+        .mobile-menu-close { position: absolute; top: var(--space-md); right: var(--space-md); background: none; border: none; color: var(--color-cream); font-size: 2rem; cursor: pointer; }
+
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .hero-expo-content, .highlights-content { grid-template-columns: 1fr; gap: var(--space-lg); }
-            .hero-expo-image { order: -1; }
-            .titoli-grid { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-item.featured { grid-column: span 2; }
+            .champion-intro-content { grid-template-columns: 1fr; gap: var(--space-lg); }
+            .titles-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
             nav ul { display: none; }
             .menu-toggle { display: flex; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .gallery-item.featured { grid-column: span 1; }
-        }
-
-        /* Mobile menu */
-        .mobile-menu {
-            position: fixed; inset: 0;
-            background: var(--color-bg); z-index: 99;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden;
-            transition: all var(--transition-smooth);
-        }
-        .mobile-menu.active { opacity: 1; visibility: visible; }
-        .mobile-menu ul { list-style: none; text-align: center; }
-        .mobile-menu li { margin-bottom: var(--space-md); }
-        .mobile-menu a { font-family: var(--font-display); font-size: 2rem; color: var(--color-cream); transition: color var(--transition-smooth); }
-        .mobile-menu a:hover { color: var(--color-rust-light); }
-        .mobile-menu-close {
-            position: absolute; top: var(--space-md); right: var(--space-md);
-            background: none; border: none;
-            color: var(--color-cream); font-size: 2rem; cursor: pointer;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 200;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-smooth);
-        }
-        .lightbox.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-        .lightbox-close {
-            position: absolute;
-            top: var(--space-md);
-            right: var(--space-md);
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            transition: transform var(--transition-smooth);
-        }
-        .lightbox-close:hover {
-            transform: rotate(90deg);
         }
     </style>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "HEAT - Palmares Esposizioni Staffordshire Bull Terrier",
-        "description": "I successi espositivi di HEAT, Campione Italiano e Internazionale Staffordshire Bull Terrier.",
-        "image": "https://www.thereds-stafford.com/images/image7.jpeg",
-        "author": {
-            "@type": "Organization",
-            "name": "TheReds Stafford"
-        }
-    }
-    </script>
-
-    <!-- Header -->
     <header>
         <div class="container">
-            <a href="index.html" title="Home TheReds Stafford" class="logo">
-                <div class="logo-icon">TR</div>
-                <div class="logo-text">The<span>Reds</span> Stafford</div>
-            </a>
+            <a href="index.html" class="logo"><div class="logo-icon">TR</div><div class="logo-text">The<span>Reds</span> Stafford</div></a>
             <nav>
                 <ul>
-                    <li><a href="index.html" title="Torna alla home">Home</a></li>
-                    <li><a href="index.html#chi-siamo" title="Chi siamo">Chi Siamo</a></li>
-                    <li><a href="index.html#maschi" title="I nostri maschi">Maschi</a></li>
-                    <li><a href="index.html#femmine" title="Le nostre femmine">Femmine</a></li>
-                    <li><a href="index.html#cuccioli" title="I nostri cuccioli">Cuccioli</a></li>
-                    <li><a href="index.html#contatti" title="Contattaci">Contatti</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="index.html#maschi">Maschi</a></li>
+                    <li><a href="index.html#femmine">Femmine</a></li>
+                    <li><a href="esposizioni.html" class="active">Esposizioni</a></li>
+                    <li><a href="index.html#cuccioli">Cuccioli</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                    <li><a href="milano-lombardia.html">Milano</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" aria-label="Chiudi menu">&times;</button>
+        <button class="mobile-menu-close" aria-label="Chiudi">&times;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
             <li><a href="index.html#maschi">Maschi</a></li>
             <li><a href="index.html#femmine">Femmine</a></li>
+            <li><a href="esposizioni.html">Esposizioni</a></li>
             <li><a href="index.html#cuccioli">Cuccioli</a></li>
             <li><a href="index.html#contatti">Contatti</a></li>
+            <li><a href="milano-lombardia.html">Milano</a></li>
         </ul>
     </div>
 
-    <!-- Hero Expo -->
-    <section class="hero-expo">
+    <section class="hero-small">
         <div class="container">
-            <div class="hero-expo-content">
-                <div class="hero-expo-text">
-                    <div class="hero-expo-badge">Palmares Esposizioni</div>
-                    <h1>Bullbrothers Hott as Hell<br><em>"HEAT"</em></h1>
-                    <p class="hero-expo-subtitle">Campione Italiano e Internazionale</p>
-                    <p class="hero-expo-description">
-                        HEAT rappresenta l'eccellenza dello Staffordshire Bull Terrier in Italia e all'estero.
-                        Con numerosi titoli conquistati nei ring più prestigiosi d'Europa, inclusa la
-                        partecipazione al <strong>Crufts</strong>, la più importante esposizione canina al mondo.
-                    </p>
-                    <div>
-                        <a href="index.html#campione" class="btn btn-primary">
-                            <span>Scopri HEAT</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="index.html#contatti" class="btn btn-outline">Contattaci</a>
-                    </div>
+            <div class="section-label">Palmares</div>
+            <h1>Esposizioni e Titoli di <em>HEAT</em></h1>
+            <p>I risultati del nostro campione nelle esposizioni cinofile italiane e internazionali</p>
+        </div>
+    </section>
+
+    <section class="champion-intro">
+        <div class="container">
+            <div class="champion-intro-content">
+                <div class="champion-intro-image reveal">
+                    <img src="images/imageye___-_imgi_5_m4_ztw8jm7u.jpg" alt="HEAT - Bullbrothers Hott as Hell - Campione Italiano Staffordshire Bull Terrier" width="500" height="667">
                 </div>
-                <div class="hero-expo-image">
-                    <div class="hero-expo-image-frame">
-                        <img src="images/image7.jpeg" alt="HEAT al Crufts - La più importante esposizione canina al mondo" width="800" height="1000" loading="eager">
-                        <div class="crufts-badge">
-                            🇬🇧 CRUFTS 2024
-                        </div>
+                <div class="champion-intro-text reveal">
+                    <h2>Bullbrothers Hott as Hell <em>"HEAT"</em></h2>
+                    <p>HEAT rappresenta l'eccellenza della razza Staffordshire Bull Terrier. Importato direttamente dall'allevamento inglese Bullbrothers, ha conquistato titoli in Italia e all'estero, dimostrando qualita morfologiche eccezionali e un temperamento esemplare.</p>
+                    <div class="champion-info">
+                        <p><strong>Breeder:</strong> Isidoro &amp; Jose Martinez (Bullbrothers UK)</p>
+                        <p><strong>Owner:</strong> Matteo Mantuano</p>
+                        <p><strong>Padre:</strong> Pridesdale The Guv'Nor</p>
+                        <p><strong>Madre:</strong> Marstaff Unforgiven</p>
+                        <p><strong>Test:</strong> Esente L2HGA, HC, HSF4 - HD/ED A-0</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Titoli -->
-    <section class="titoli">
+    <section class="titles-section">
         <div class="container">
-            <div class="section-header reveal">
-                <div class="section-label">I Nostri Successi</div>
-                <h2>Titoli e Riconoscimenti</h2>
+            <div class="section-header reveal"><div class="section-label">Titoli Conquistati</div><h2>Campionati e Riconoscimenti</h2></div>
+            <div class="titles-grid">
+                <div class="title-card reveal"><div class="title-icon">&#127942;</div><div class="title-text"><h3>Campione Italiano</h3><p>Titolo ENCI - Ente Nazionale Cinofilia Italiana</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#127942;</div><div class="title-text"><h3>Campione Internazionale</h3><p>Titolo FCI - Federation Cynologique Internationale</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#127942;</div><div class="title-text"><h3>Campione San Marino</h3><p>Titolo Kennel Club San Marino</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#127942;</div><div class="title-text"><h3>Campione Svizzera</h3><p>Titolo SKG - Schweizerische Kynologische Gesellschaft</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#127942;</div><div class="title-text"><h3>Campione Slovenia</h3><p>Titolo KZS - Kinolo&#353;ka Zveza Slovenije</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#129351;</div><div class="title-text"><h3>Giovane Campione Italiano</h3><p>Titolo Classe Giovani ENCI</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#129351;</div><div class="title-text"><h3>Giovane Campione Slovenia</h3><p>Titolo Classe Giovani KZS</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#129351;</div><div class="title-text"><h3>Giovane Campione Romania</h3><p>Titolo Classe Giovani AChR</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#129351;</div><div class="title-text"><h3>Giovane Campione Macedonia</h3><p>Titolo Classe Giovani KSM</p></div></div>
+                <div class="title-card reveal"><div class="title-icon">&#127468;&#127463;</div><div class="title-text"><h3>Qualificato Crufts</h3><p>La piu prestigiosa esposizione canina del mondo - Birmingham, UK</p></div></div>
             </div>
-            <div class="titoli-grid">
-                <div class="titoli-category reveal">
-                    <h3><span>🏆</span> Campionati Nazionali</h3>
-                    <ul class="titoli-list">
-                        <li>Campione Italiano</li>
-                        <li>Campione San Marino</li>
-                        <li>Campione Svizzera</li>
-                        <li>Campione Slovenia</li>
-                    </ul>
+        </div>
+    </section>
+
+    <section class="exhibitions-section">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-label">Esposizioni</div><h2>Risultati Principali</h2></div>
+            <div class="exhibitions-list">
+                <div class="exhibition-item reveal">
+                    <h3>Crufts 2024 - Birmingham (UK)</h3>
+                    <p><span class="result">Qualificato</span> - La piu importante esposizione canina del mondo</p>
                 </div>
-                <div class="titoli-category reveal">
-                    <h3><span>🥇</span> Campionati Giovani</h3>
-                    <ul class="titoli-list">
-                        <li>Giovane Campione Italiano</li>
-                        <li>Giovane Campione Slovenia</li>
-                        <li>Giovane Campione Romania</li>
-                        <li>Giovane Campione Macedonia</li>
-                    </ul>
+                <div class="exhibition-item reveal">
+                    <h3>Romagna Winner 2023</h3>
+                    <p><span class="result">BOB - Best of Breed</span> - Miglior Staffordshire Bull Terrier</p>
                 </div>
-                <div class="titoli-category reveal">
-                    <h3><span>🌍</span> Esposizioni Internazionali</h3>
-                    <ul class="titoli-list">
-                        <li>Qualificato Crufts (UK)</li>
-                        <li>Romagna Winner</li>
-                        <li>National Terrier Club (UK)</li>
-                        <li>Numerosi BOB e BOS</li>
-                    </ul>
+                <div class="exhibition-item reveal">
+                    <h3>National Terrier Club Show</h3>
+                    <p><span class="result">BOB - Best of Breed</span> - Esposizione specializzata Terrier</p>
                 </div>
-                <div class="titoli-category reveal">
-                    <h3><span>🧬</span> Salute e Genetica</h3>
-                    <ul class="titoli-list">
-                        <li>Esente L2HGA</li>
-                        <li>Esente HC (Cataratta Ereditaria)</li>
-                        <li>Esente HSF4</li>
-                        <li>HD/ED Grado A-0</li>
-                    </ul>
+                <div class="exhibition-item reveal">
+                    <h3>Esposizione Internazionale Milano</h3>
+                    <p><span class="result">CAC, CACIB</span> - Certificati di Campionato</p>
+                </div>
+                <div class="exhibition-item reveal">
+                    <h3>Esposizione Internazionale Padova</h3>
+                    <p><span class="result">CAC, CACIB</span> - Certificati di Campionato</p>
+                </div>
+                <div class="exhibition-item reveal">
+                    <h3>Raduno Nazionale SBT Italia</h3>
+                    <p><span class="result">Eccellente 1</span> - Raduno specializzato della razza</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="gallery">
+    <section class="cta-section">
         <div class="container">
-            <div class="section-header reveal">
-                <div class="section-label">Galleria</div>
-                <h2>Momenti di Gloria</h2>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item featured reveal" onclick="openLightbox(this)">
-                    <img src="images/image6.jpeg" alt="HEAT - Romagna Winner - 1° Posto" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h4>Romagna Winner</h4>
-                        <p>1° Posto - Best of Breed</p>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="images/image7.jpeg" alt="HEAT al Crufts" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h4>Crufts</h4>
-                        <p>Birmingham, UK</p>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="images/image12.jpeg" alt="HEAT al National Terrier Club" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h4>National Terrier Club</h4>
-                        <p>Regno Unito</p>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="images/image8.jpeg" alt="HEAT in esposizione internazionale" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h4>Esposizione Internazionale</h4>
-                        <p>Giudizio in Ring</p>
-                    </div>
-                </div>
-                <div class="gallery-item reveal" onclick="openLightbox(this)">
-                    <img src="images/image9.jpeg" alt="HEAT - Celebrazione vittoria" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h4>Vittoria!</h4>
-                        <p>Momenti di gioia</p>
-                    </div>
-                </div>
+            <h2>Vuoi Saperne di Piu?</h2>
+            <p>Contattaci per informazioni sui nostri cani e sulle prossime cucciolate</p>
+            <div class="cta-buttons">
+                <a href="index.html#contatti" class="btn btn-primary">Contattaci</a>
+                <a href="https://sbtpedigree.com/dog_details?dogs_id=4487081" target="_blank" rel="noopener" class="btn btn-gold">&#128279; Pedigree HEAT</a>
+                <a href="files/ANTAGENE-A00038092-E00847325-HEAT.pdf" target="_blank" class="btn btn-outline">&#128196; Test DNA</a>
             </div>
         </div>
     </section>
 
-    <!-- Highlights -->
-    <section class="highlights">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-label">Highlights</div>
-                <h2>I Momenti Più Importanti</h2>
-            </div>
-            <div class="highlights-content">
-                <div class="highlight-card reveal">
-                    <div class="highlight-card-image">
-                        <img src="images/image7.jpeg" alt="HEAT al Crufts" loading="lazy">
-                    </div>
-                    <div class="highlight-card-content">
-                        <span class="highlight-tag">🇬🇧 Regno Unito</span>
-                        <h3>Crufts - Birmingham</h3>
-                        <p>
-                            Il Crufts è la più grande e prestigiosa esposizione canina al mondo.
-                            HEAT ha ottenuto la qualificazione e ha rappresentato l'Italia
-                            sul palcoscenico internazionale più importante.
-                        </p>
-                    </div>
-                </div>
-                <div class="highlight-card reveal">
-                    <div class="highlight-card-image">
-                        <img src="images/image12.jpeg" alt="HEAT al National Terrier Club" loading="lazy">
-                    </div>
-                    <div class="highlight-card-content">
-                        <span class="highlight-tag">🇬🇧 Regno Unito</span>
-                        <h3>National Terrier Club</h3>
-                        <p>
-                            Prestigiosa esposizione dedicata ai terrier nel Regno Unito,
-                            patria dello Staffordshire Bull Terrier. Un riconoscimento
-                            importante per le nostre linee di sangue inglesi.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2>Vuoi un Cucciolo dalla Linea di HEAT?</h2>
-            <p>
-                I cuccioli figli di HEAT ereditano le sue eccezionali qualità morfologiche e caratteriali.
-                Contattaci per informazioni sulla disponibilità.
-            </p>
-            <a href="index.html#contatti" class="btn btn-primary">
-                <span>Contattaci</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="index.html#cuccioli" class="btn btn-outline">Vedi Cuccioli</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>© 2025 <strong>TheReds Stafford</strong> — Allevamento Staffordshire Bull Terrier</p>
-                    <p>Verrua Po (PV), Lombardia • Owner: Matteo Mantuano</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#contatti">Contatti</a>
-                </div>
+                <div class="footer-text"><p>&copy; 2025 <strong>TheReds Stafford</strong> - Allevamento Staffordshire Bull Terrier</p><p>Verrua Po (PV), Lombardia - Owner: Matteo Mantuano</p></div>
+                <div class="footer-links"><a href="index.html">Home</a><a href="milano-lombardia.html">Milano</a><a href="index.html#contatti">Contatti</a></div>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-        <img src="" alt="Immagine ingrandita" id="lightbox-img">
-    </div>
-
     <script>
-        // Mobile menu
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-        menuToggle.addEventListener('click', () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
-        const closeMenu = () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; };
+        var menuToggle = document.querySelector('.menu-toggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var mobileMenuClose = document.querySelector('.mobile-menu-close');
+        menuToggle.addEventListener('click', function() { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
+        function closeMenu() { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }
         mobileMenuClose.addEventListener('click', closeMenu);
-        mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-        // Reveal on scroll
-        const reveals = document.querySelectorAll('.reveal');
+        mobileMenu.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', closeMenu); });
+        var reveals = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { rootMargin: '-50px' });
-            reveals.forEach(el => revealObserver.observe(el));
-        } else {
-            reveals.forEach(el => el.classList.add('visible'));
-        }
-
-        // Lightbox
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+            }, { rootMargin: '-100px' });
+            reveals.forEach(function(el) { revealObserver.observe(el); });
+        } else { reveals.forEach(function(el) { el.classList.add('visible'); }); }
     </script>
 </body>
 </html>
