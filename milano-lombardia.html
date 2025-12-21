@@ -301,15 +301,122 @@
             reveals.forEach(function(el) { revealObserver.observe(el); });
         } else { reveals.forEach(function(el) { el.classList.add('visible'); }); }
     </script>
-    <!-- COOKIE BANNER - INCOLLA QUI TUTTO IL CODICE -->
-    <div id="cookieBanner" style="...">
-        ...tutto il banner...
-    </div>
-    <script>
-        ...tutto lo script...
-    </script>
-    <!-- FINE COOKIE BANNER -->
+    <!-- ============================================ -->
+<!-- COOKIE BANNER - AGGIUNGI PRIMA DI </body>   -->
+<!-- ============================================ -->
 
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"...></script>
-</body>
-</html>
+<!-- Cookie Banner HTML -->
+<div id="cookieBanner" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1a1512;
+    border-top: 1px solid rgba(196, 92, 62, 0.3);
+    padding: 1rem 1.5rem;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+">
+    <div style="
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    ">
+        <div style="flex: 1; min-width: 280px;">
+            <p style="margin: 0; color: #c9c0b4; font-size: 0.95rem; line-height: 1.5;">
+                🍪 Questo sito utilizza cookie per analisi statistiche (ShinyStat).
+                <a href="privacy.html" style="color: #d4735a;">Leggi la Privacy Policy</a>
+            </p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button onclick="acceptCookies()" style="
+                background: linear-gradient(135deg, #c45c3e, #a34830);
+                color: #f5f0e8;
+                border: none;
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+                font-weight: 600;
+                border-radius: 4px;
+                cursor: pointer;
+            ">Accetta</button>
+            <button onclick="declineCookies()" style="
+                background: transparent;
+                color: #c9c0b4;
+                border: 1px solid rgba(245,240,232,0.3);
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+                border-radius: 4px;
+                cursor: pointer;
+            ">Rifiuta</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Banner Script -->
+<script>
+(function() {
+    var banner = document.getElementById('cookieBanner');
+    var consent = localStorage.getItem('cookieConsent');
+
+    // Se non c'è consenso salvato, mostra il banner
+    if (!consent) {
+        banner.style.display = 'block';
+    }
+
+    // Se ha accettato, carica ShinyStat
+    if (consent === 'accepted') {
+        loadShinyStat();
+    }
+})();
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').style.display = 'none';
+    loadShinyStat();
+}
+
+function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').style.display = 'none';
+}
+
+function loadShinyStat() {
+    // Carica ShinyStat solo se accettato
+    var script = document.createElement('script');
+    script.src = '//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-53040779-47aea';
+    document.body.appendChild(script);
+}
+</script>
+
+<!-- ============================================ -->
+<!-- FINE COOKIE BANNER                          -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!-- IMPORTANTE: RIMUOVI IL VECCHIO CODICE SHINYSTAT -->
+<!-- ============================================ -->
+<!--
+CANCELLA QUESTO DAL SITO (era in fondo alla pagina):
+
+<script src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=SS-53040779-47aea" type="text/javascript"></script>
+<noscript><a href="https://www.shinystat.com/it/" target="_top"><img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-53040779-47aea" alt="Statistiche accessi" style="border:0px" /></a></noscript>
+
+Verrà caricato automaticamente dal banner solo se l'utente accetta.
+-->
+
+
+<!-- ============================================ -->
+<!-- LINK PRIVACY NEL FOOTER                     -->
+<!-- ============================================ -->
+<!--
+Aggiungi nel footer, dopo gli altri link:
+
+<a href="privacy.html">Privacy Policy</a>
+-->
