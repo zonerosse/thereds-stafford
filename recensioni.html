@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni | TheReds Stafford - Allevamento Staffordshire Bull Terrier</title>
+    <meta name="description" content="Leggi le recensioni dei nostri clienti soddisfatti. TheReds Stafford: allevamento Staffordshire Bull Terrier a Verrua Po, vicino Milano. 5 stelle su Google.">
+    <link rel="canonical" href="https://www.thereds-stafford.com/recensioni.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #1a1512;
+            --color-bg-warm: #241c18;
+            --color-cream: #f5f0e8;
+            --color-cream-muted: #c9c0b4;
+            --color-rust: #c45c3e;
+            --color-rust-light: #d4735a;
+            --color-rust-dark: #a34830;
+            --color-gold: #d4a853;
+            --color-text: #f5f0e8;
+            --color-text-muted: #a89b8c;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
+        p { font-size: 1.05rem; color: var(--color-cream-muted); }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-sm) 0;
+            background-color: rgba(26, 21, 18, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--color-cream);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .logo-text span { color: var(--color-rust-light); }
+
+        nav ul {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-cream-muted);
+            position: relative;
+            padding: var(--space-xs) 0;
+            transition: color var(--transition-smooth);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-rust);
+            transition: width var(--transition-smooth);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--color-cream);
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 2px;
+            background: var(--color-cream);
+            transition: var(--transition-smooth);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: var(--color-bg);
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: none;
+            border: none;
+            color: var(--color-cream);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu li { margin: var(--space-sm) 0; }
+
+        .mobile-menu a {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-cream);
+            transition: color var(--transition-smooth);
+        }
+
+        .mobile-menu a:hover { color: var(--color-rust-light); }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+            text-align: center;
+            background: 
+                radial-gradient(ellipse at 50% 100%, rgba(196, 92, 62, 0.15) 0%, transparent 50%),
+                linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
+        }
+
+        .page-header h1 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .page-header p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* GOOGLE RATING */
+        .google-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            padding: var(--space-sm) var(--space-md);
+            background: rgba(255,255,255,0.05);
+            border-radius: 50px;
+            display: inline-flex;
+        }
+
+        .google-rating img {
+            height: 24px;
+        }
+
+        .google-rating .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .google-rating .rating-text {
+            color: var(--color-cream);
+            font-weight: 600;
+        }
+
+        /* REVIEWS SECTION */
+        .reviews-section {
+            padding: var(--space-lg) 0 var(--space-xl);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .review-card {
+            background: var(--color-bg-warm);
+            border: 1px solid rgba(196, 92, 62, 0.2);
+            border-radius: 12px;
+            padding: var(--space-md);
+            transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(196, 92, 62, 0.4);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-cream);
+        }
+
+        .review-meta h3 {
+            color: var(--color-cream);
+            margin-bottom: 2px;
+        }
+
+        .review-meta .review-date {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-text {
+            color: var(--color-cream-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .review-text.no-text {
+            font-style: italic;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .local-guide {
+            display: inline-block;
+            background: rgba(212, 168, 83, 0.15);
+            color: var(--color-gold);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: var(--space-xl) 0;
+            text-align: center;
+            background: 
+                radial-gradient(ellipse at 50% 0%, rgba(196, 92, 62, 0.1) 0%, transparent 50%),
+                var(--color-bg);
+        }
+
+        .cta-section h2 {
+            margin-bottom: var(--space-sm);
+        }
+
+        .cta-section p {
+            max-width: 500px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-rust), var(--color-rust-dark));
+            color: var(--color-cream);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 92, 62, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--color-bg);
+            border-top: 1px solid rgba(245, 240, 232, 0.1);
+            padding: var(--space-md) 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .footer-text p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            transition: color var(--transition-smooth);
+        }
+
+        .footer-links a:hover { color: var(--color-rust-light); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .menu-toggle { display: flex; }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">TR</div>
+                <div class="logo-text">TheReds <span>Stafford</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="index.html#maschi">Maschi</a></li>
+                    <li><a href="index.html#femmine">Femmine</a></li>
+                    <li><a href="esposizioni.html">Esposizioni</a></li>
+                    <li><a href="index.html#cuccioli">Cuccioli</a></li>
+                    <li><a href="recensioni.html" class="active">Recensioni</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" aria-label="Chiudi menu">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+            <li><a href="index.html#maschi">Maschi</a></li>
+            <li><a href="index.html#femmine">Femmine</a></li>
+            <li><a href="esposizioni.html">Esposizioni</a></li>
+            <li><a href="index.html#cuccioli">Cuccioli</a></li>
+            <li><a href="recensioni.html">Recensioni</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+        </ul>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Cosa Dicono di Noi</h1>
+            <p>Le opinioni dei nostri clienti sono la nostra migliore presentazione. Leggi le recensioni di chi ha scelto TheReds Stafford.</p>
+            <div class="google-rating">
+                <svg height="24" viewBox="0 0 24 24" width="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">5.0 su Google</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-grid">
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">GG</div>
+                        <div class="review-meta">
+                            <h3>Giuliano Emanuele Guerra</h3>
+                            <span class="review-date">43 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Allevatore molto professionale, è sempre presente in qualsiasi momento, sa come accontentare tutti, tornerò presto da lui per un altro cucciolo! Ve lo consiglio vivamente.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">RE</div>
+                        <div class="review-meta">
+                            <h3>Rai Edo</h3>
+                            <span class="review-date">43 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Oltre alla grande professionalità, alla simpatia e alla preparazione, cani fenomenali. Ho acquistato una femmina che è fantastica!</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">AB</div>
+                        <div class="review-meta">
+                            <h3>Alessio Barbin</h3>
+                            <span class="review-date">43 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Abbiamo preso un cucciolo in questo allevamento, meraviglioso il nostro gioiello. Consigliamo a tutti questo allevamento, hanno dei cuccioli stupendi e i proprietari sono persone molto serie e competenti.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">LN</div>
+                        <div class="review-meta">
+                            <h3>Luca Noscardi</h3>
+                            <span class="review-date">43 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Grande professionalità, ci siamo trovati benissimo. Consigliato!</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">GG</div>
+                        <div class="review-meta">
+                            <h3>Giacomo G<span class="local-guide">Local Guide</span></h3>
+                            <span class="review-date">42 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Professionista serio e preparato. Mi sono rivolto a Matteo diverse volte e sono sempre rimasto soddisfatto.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">IS</div>
+                        <div class="review-meta">
+                            <h3>Italian Staffy's Kingdom</h3>
+                            <span class="review-date">41 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Ha degli ottimi soggetti, usato il suo stallone di punta HEAT per un accoppiamento e siamo davvero soddisfatti. Grazie a Matteo per la sua professionalità.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">ON</div>
+                        <div class="review-meta">
+                            <h3>Ombretta Nicrosini</h3>
+                            <span class="review-date">41 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Cuccioli sani, felici e ben curati, gestiti con passione e competenza da persone che amano davvero i loro cani.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">DM</div>
+                        <div class="review-meta">
+                            <h3>Daniele Montalbano</h3>
+                            <span class="review-date">38 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Allevatore molto gentile e disponibile e professionale nel suo lavoro. Mi sono imbattuto in un annuncio e sono rimasto colpito dalla serietà.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">IM</div>
+                        <div class="review-meta">
+                            <h3>Ivana Mantuano<span class="local-guide">Local Guide</span></h3>
+                            <span class="review-date">38 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Professionalità & cortesia! Chappy è perfetto: equilibrato e dolcissimo. Grazie!</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">AT</div>
+                        <div class="review-meta">
+                            <h3>Alberto Talami</h3>
+                            <span class="review-date">35 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Titolare molto competente, mi ha aiutato nella scelta di un bellissimo cucciolo. Sempre presente e disponibile. Consigliatissimo!</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">PP</div>
+                        <div class="review-meta">
+                            <h3>Paolo Patrucco</h3>
+                            <span class="review-date">24 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Ho preso una staffina in questo allevamento. Esperienza eccezionale!</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">EB</div>
+                        <div class="review-meta">
+                            <h3>Enrico Braccio<span class="local-guide">Local Guide</span></h3>
+                            <span class="review-date">23 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Personaggio particolare ma incredibilmente competente e onesto. I cani hanno una marcia in più.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">VP</div>
+                        <div class="review-meta">
+                            <h3>Vito Pepe</h3>
+                            <span class="review-date">19 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Ho appena preso una femminuccia di 2 mesi stupenda. Grazie Matteo sia come persona gentile che come allevatore ottimo. Grazie ancora! 😍</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">EF</div>
+                        <div class="review-meta">
+                            <h3>Erika Fulco</h3>
+                            <span class="review-date">18 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text no-text">Ha lasciato una valutazione a 5 stelle.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">FB</div>
+                        <div class="review-meta">
+                            <h3>Federico Beggi</h3>
+                            <span class="review-date">8 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text no-text">Ha lasciato una valutazione a 5 stelle.</p>
+                </div>
+
+                <div class="review-card reveal">
+                    <div class="review-header">
+                        <div class="review-avatar">FR</div>
+                        <div class="review-meta">
+                            <h3>Francesca Rat</h3>
+                            <span class="review-date">6 settimane fa</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text no-text">Ha lasciato una valutazione a 5 stelle.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Vuoi Unirti alla Famiglia?</h2>
+            <p>Contattaci per conoscere i nostri cuccioli disponibili e scoprire se lo Staffy è il cane giusto per te.</p>
+            <a href="index.html#contatti" class="btn btn-primary">
+                <span>Contattaci Ora</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 <strong>TheReds Stafford</strong> - Allevamento Staffordshire Bull Terrier</p>
+                    <p>Verrua Po (PV), Lombardia - Owner: Matteo Mantuano</p>
+                </div>
+                <div class="footer-links">
+                    <a href="esposizioni.html">Esposizioni</a>
+                    <a href="milano-lombardia.html">Staffy Milano</a>
+                    <a href="index.html#contatti">Contatti</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var menuToggle = document.querySelector('.menu-toggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMenu);
+        });
+
+        var reveals = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '-50px' });
+            reveals.forEach(function(el) { revealObserver.observe(el); });
+        } else {
+            reveals.forEach(function(el) { el.classList.add('visible'); });
+        }
+    </script>
+
+</body>
+</html>
