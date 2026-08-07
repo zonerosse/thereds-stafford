@@ -1,0 +1,14 @@
+# Cloudflare Pages - canonicalizzazione host
+https://thereds-stafford.com/*   https://www.thereds-stafford.com/:splat   301
+# vecchi URL con estensione .html -> URL puliti
+/index.html        /                    301
+/chi-siamo.html    /chi-siamo           301
+/maschi.html       /maschi              301
+/femmine.html      /femmine             301
+/cuccioli.html     /cuccioli            301
+/esposizioni.html  /esposizioni         301
+/esposizioni-heat.html /esposizioni     301
+/recensioni.html   /recensioni          301
+/contatti.html     /contatti            301
+/privacy.html      /privacy             301
+/milano-lombardia.html /milano-lombardia 301
