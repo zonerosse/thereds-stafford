@@ -9,6 +9,9 @@ https://thereds-stafford.com/*   https://www.thereds-stafford.com/:splat   301
 /esposizioni.html  /esposizioni         301
 /esposizioni-heat.html /esposizioni     301
 /recensioni.html   /recensioni          301
-/contatti.html     /contatti            301
 /privacy.html      /privacy             301
-/milano-lombardia.html /milano-lombardia 301
+# pagina Contatti fusa con la landing Milano/Lombardia
+/contatti              /allevamento-staffordshire-bull-terrier-milano-lombardia   301
+/contatti.html         /allevamento-staffordshire-bull-terrier-milano-lombardia   301
+/milano-lombardia      /allevamento-staffordshire-bull-terrier-milano-lombardia   301
+/milano-lombardia.html /allevamento-staffordshire-bull-terrier-milano-lombardia   301

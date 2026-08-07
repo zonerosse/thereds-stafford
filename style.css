@@ -1019,3 +1019,34 @@ blockquote {
         flex-wrap: wrap;
     }
 }
+
+/* FAQ - pagina Contatti / Milano */
+.faq-list { max-width: 820px; margin: var(--space-md) auto 0; }
+.faq-item { border-bottom: 1px solid rgba(196,92,62,.25); padding: 1.2rem 0; }
+.faq-item summary { cursor: pointer; font-weight: 600; font-size: 1.08rem; color: var(--color-cream);
+    list-style: none; position: relative; padding-right: 2rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; position: absolute; right: 0; top: -2px; font-size: 1.6rem;
+    line-height: 1; color: var(--color-rust); transition: transform .25s; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { margin-top: .9rem; color: var(--color-text-muted); line-height: 1.8; }
+.faq-item a { color: var(--color-rust-light); }
+
+/* WhatsApp flottante */
+.wa-float { position: fixed; right: 18px; bottom: 18px; z-index: 900; width: 56px; height: 56px;
+    border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center;
+    justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: transform .2s; }
+.wa-float:hover { transform: scale(1.08); }
+@media (max-width: 600px) { .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; } }
+
+/* CTA contatti (sostituisce il modulo) */
+.contact-cta { background: var(--color-bg-warm); border: 1px solid rgba(196,92,62,.25);
+    border-radius: 16px; padding: var(--space-md); align-self: start; }
+.contact-cta h2 { font-family: var(--font-display); font-size: 1.9rem; margin-bottom: var(--space-sm); }
+.contact-cta p { color: var(--color-text-muted); line-height: 1.8; }
+.contact-cta-buttons { display: flex; flex-wrap: wrap; gap: .8rem; margin: var(--space-sm) 0; }
+.btn-whatsapp { background: #25D366; color: #0b2e19; border: none; display: inline-flex;
+    align-items: center; gap: .5rem; font-weight: 600; }
+.btn-whatsapp:hover { background: #1fb855; }
+.contact-cta-note { font-size: .92rem; }
+.contact-cta-note a { color: var(--color-rust-light); }
