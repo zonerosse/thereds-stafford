@@ -493,6 +493,73 @@
         .lightbox-close:hover {
             transform: rotate(90deg);
         }
+
+        /* ===== Progenie di HEAT ===== */
+        .progenie {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-warm);
+        }
+        .progenie-card {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: var(--space-md);
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(212, 168, 83, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .progenie-card-image { line-height: 0; }
+        .progenie-card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform var(--transition-smooth);
+        }
+        .progenie-card-image:hover img { transform: scale(1.04); }
+        .progenie-card-content { padding: var(--space-md); }
+        .progenie-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(212, 168, 83, 0.2), rgba(212, 168, 83, 0.1));
+            border: 1px solid rgba(212, 168, 83, 0.4);
+            color: var(--color-gold);
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: var(--space-xs);
+        }
+        .progenie-card-content h3 {
+            font-family: var(--font-display);
+            color: var(--color-cream);
+            font-size: 1.5rem;
+            line-height: 1.25;
+            margin-bottom: var(--space-sm);
+        }
+        .progenie-data { list-style: none; margin-bottom: var(--space-sm); }
+        .progenie-data li {
+            color: var(--color-text-muted);
+            padding: 0.25rem 0;
+            font-size: 0.98rem;
+        }
+        .progenie-data li strong { color: var(--color-cream); font-weight: 600; }
+        .progenie-nota {
+            color: var(--color-text-muted);
+            font-size: 0.98rem;
+            margin-bottom: var(--space-sm);
+        }
+        .progenie-nota a {
+            color: var(--color-gold);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        @media (max-width: 768px) {
+            .progenie-card { grid-template-columns: 1fr; }
+        }
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -868,6 +935,45 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- Progenie -->
+    <section class="progenie">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Figli di HEAT</div>
+                <h2>La Sua Progenie</h2>
+            </div>
+
+            <article class="progenie-card reveal">
+                <a class="progenie-card-image"
+                   href="https://delpiccolodiavolo.it/maschi-staffordshire-bull-terrier/"
+                   target="_blank" rel="noopener"
+                   title="Lothar Matth&auml;us del Piccolo Diavolo, figlio di HEAT">
+                    <img src="/images/lothar-matthaus-figlio-heat.webp"
+                         alt="Lothar Matth&auml;us, Staffordshire Bull Terrier Giovane Campione Italiano dell'allevamento Del Piccolo Diavolo, figlio di HEAT"
+                         width="350" height="467" loading="lazy" decoding="async">
+                </a>
+                <div class="progenie-card-content">
+                    <span class="progenie-badge">&#127942; Giovane Campione Italiano</span>
+                    <h3>JCH. Lothar Matth&auml;us del Piccolo Diavolo</h3>
+                    <ul class="progenie-data">
+                        <li><strong>Padre:</strong> Bullbrothers Hott as Hell &laquo;HEAT&raquo;</li>
+                        <li><strong>Madre:</strong> Skilful-Dogs Nora</li>
+                        <li><strong>Test genetici:</strong> L2HGA e HC clear by DNA, PHPV unaffected</li>
+                        <li><strong>Dentatura:</strong> completa, chiusura a forbice</li>
+                    </ul>
+                    <p class="progenie-nota">
+                        Nato presso l'<a href="https://delpiccolodiavolo.it/maschi-staffordshire-bull-terrier/"
+                        target="_blank" rel="noopener">allevamento Staffordshire Bull Terrier Del Piccolo Diavolo</a>
+                        di Ostellato (Ferrara).
+                    </p>
+                    <a href="https://sbtpedigree.com/dog_details?dogs_id=4554911"
+                       class="btn btn-outline" target="_blank" rel="noopener">Pedigree completo</a>
+                </div>
+            </article>
         </div>
     </section>
 
