@@ -560,6 +560,19 @@
         @media (max-width: 768px) {
             .progenie-card { grid-template-columns: 1fr; }
         }
+
+        /* ===== Scheda anagrafica HEAT ===== */
+        .anagrafica{padding:var(--space-lg) 0}
+        .anagrafica-box{max-width:900px;margin:0 auto;background:rgba(255,255,255,.03);
+            border:1px solid rgba(212,168,83,.2);border-radius:16px;padding:var(--space-md)}
+        .anagrafica-box h2{font-family:var(--font-display);color:var(--color-cream);
+            font-size:1.5rem;margin-bottom:var(--space-sm);text-align:center}
+        .anagrafica-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            gap:.9rem var(--space-md);margin-bottom:var(--space-md)}
+        .anagrafica-grid span{display:block;color:var(--color-gold);font-size:.78rem;
+            letter-spacing:.08em;text-transform:uppercase;margin-bottom:.15rem}
+        .anagrafica-grid strong{color:var(--color-cream);font-weight:500;line-height:1.5}
+        .anagrafica-links{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -690,7 +703,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Esposizioni",
+          "name": "HEAT",
           "item": "https://www.thereds-stafford.com/esposizioni"
         }
       ]
@@ -737,7 +750,7 @@
                     <li><a href="/maschi">Maschi</a></li>
                     <li><a href="/femmine">Femmine</a></li>
                     <li><a href="/cuccioli">Cuccioli</a></li>
-                    <li><a href="/esposizioni" class="active">Esposizioni</a></li>
+                    <li><a href="/esposizioni" class="active">HEAT</a></li>
                     <li><a href="/recensioni">Recensioni</a></li>
                     <li><a href="/allevamento-staffordshire-bull-terrier-milano-lombardia">Contatti</a></li>
                 </ul>
@@ -755,7 +768,7 @@
             <li><a href="/maschi">Maschi</a></li>
             <li><a href="/femmine">Femmine</a></li>
             <li><a href="/cuccioli">Cuccioli</a></li>
-            <li><a href="/esposizioni" class="active">Esposizioni</a></li>
+            <li><a href="/esposizioni" class="active">HEAT</a></li>
             <li><a href="/recensioni">Recensioni</a></li>
             <li><a href="/allevamento-staffordshire-bull-terrier-milano-lombardia">Contatti</a></li>
         </ul>
@@ -795,6 +808,29 @@
     </section>
 
     <!-- Titoli -->
+
+    <!-- Scheda anagrafica -->
+    <section class="anagrafica">
+        <div class="container">
+            <div class="anagrafica-box reveal">
+                <h2>Scheda del Riproduttore</h2>
+                <div class="anagrafica-grid">
+                    <div><span>Data di nascita</span><strong>4 novembre 2021</strong></div>
+                    <div><span>Padre</span><strong>Pridesdale The Guv&rsquo;Nor</strong></div>
+                    <div><span>Madre</span><strong>Marstaff Unforgiven</strong></div>
+                    <div><span>Allevatore</span><strong>Isidoro &amp; Jose Martinez &mdash; Bullbrothers, UK</strong></div>
+                    <div><span>Proprietario</span><strong>Matteo Mantuano &mdash; TheReds Stafford</strong></div>
+                    <div><span>Test genetici</span><strong>L2HGA, HC e HSF4 esente</strong></div>
+                </div>
+                <div class="anagrafica-links">
+                    <a href="https://sbtpedigree.com/dog_details?dogs_id=4487081" target="_blank" rel="noopener" class="btn btn-outline">Pedigree completo</a>
+                    <a href="/files/ANTAGENE-A00038092-E00847325-HEAT.pdf" target="_blank" rel="noopener" class="btn btn-outline">Certificato test DNA</a>
+                    <a href="/maschi" class="btn btn-outline">Gli altri stalloni</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="titoli">
         <div class="container">
             <div class="section-header reveal">
