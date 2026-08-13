@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="stylesheet" href="/style.css">
     <style>
         :root {
             --color-bg: #1a1512;
@@ -579,6 +580,13 @@
         .bullbrothers-testo{max-width:760px;margin:0 auto}
         .bullbrothers-testo p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-sm);font-size:1.05rem}
         .bullbrothers-testo strong{color:var(--color-cream)}
+
+        /* ===== Bottone WhatsApp flottante ===== */
+        .wa-float{position:fixed;right:18px;bottom:18px;z-index:900;width:56px;height:56px;
+            border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;
+            justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .2s}
+        .wa-float:hover{transform:scale(1.08)}
+        @media (max-width:600px){.wa-float{width:52px;height:52px;right:14px;bottom:14px}}
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -757,7 +765,7 @@
                     <li><a href="/femmine">Femmine</a></li>
                     <li><a href="/cuccioli">Cuccioli</a></li>
                     <li><a href="/esposizioni" class="active">HEAT</a></li>
-                    <li><a href="/esposizioni-risultati">Risultati</a></li>
+                    <li><a href="/esposizioni-risultati">Esposizioni</a></li>
                     <li><a href="/recensioni">Recensioni</a></li>
                     <li><a href="/allevamento-staffordshire-bull-terrier-milano-lombardia">Contatti</a></li>
                 </ul>
@@ -776,7 +784,7 @@
             <li><a href="/femmine">Femmine</a></li>
             <li><a href="/cuccioli">Cuccioli</a></li>
             <li><a href="/esposizioni" class="active">HEAT</a></li>
-                    <li><a href="/esposizioni-risultati">Risultati</a></li>
+                    <li><a href="/esposizioni-risultati">Esposizioni</a></li>
             <li><a href="/recensioni">Recensioni</a></li>
             <li><a href="/allevamento-staffordshire-bull-terrier-milano-lombardia">Contatti</a></li>
         </ul>
