@@ -1,0 +1,68 @@
+thereds-stafford-privacy.zip  (versione 2)
+==========================================
+
+VA IN:  la cartella del sito di Matteo (thereds-stafford)
+
+UNDICI FILE: le 10 pagine HTML e style.css.
+Sostituisce la versione precedente: quella chiedeva di scaricare i font,
+questa no.
+
+NIENTE DA SCARICARE. Si scompatta e si pubblica.
+
+COSA E' CAMBIATO
+================
+
+1. VIA GOOGLE FONTS, SOSTITUITI CON FONT DI SISTEMA
+
+   Prima ogni visitatore, appena apriva una pagina, mandava il proprio
+   indirizzo IP a fonts.googleapis.com e fonts.gstatic.com. Succedeva al
+   primo caricamento, senza consenso e senza che nessuno lo sapesse.
+
+   Adesso il sito non carica NESSUN dominio esterno. Verificato: zero.
+
+   I titoli:  Georgia, con Times New Roman come ripiego
+   Il testo:  la pila di sistema (Segoe UI su Windows, San Francisco su
+              Mac e iPhone, Roboto su Android)
+
+   Georgia era gia' scritta nel CSS come ripiego dei titoli: l'ho solo
+   promossa a prima scelta. E' un serif disegnato per lo schermo, presente
+   su Windows, macOS, iOS e Android.
+
+   COSA CAMBIA A VEDERSI: i titoli avranno un tratto piu' robusto e meno
+   contrastato di Playfair Display, che era piu' elegante e piu' magro.
+   Il testo cambia pochissimo. Guarda una pagina e dimmi se ti sta bene:
+   se non ti convince, si torna ai font veri scaricando i sette file.
+
+   IN CAMBIO: due richieste esterne in meno per pagina e nessuna attesa
+   per il caricamento dei font. Il sito e' piu' veloce di prima.
+
+2. LA PRIVACY DICHIARAVA UN FORM CHE NON C'E'
+
+   Diceva che i dati si raccolgono anche tramite "form di contatto del
+   sito". Il form era stato tolto: ho cercato in tutte e dieci le pagine
+   e non c'e'. Riga rimossa.
+
+3. WHATSAPP NON ERA DICHIARATO
+
+   C'e' e viene usato per i contatti. Aggiunto all'elenco.
+
+4. CLOUDFLARE WEB ANALYTICS NON ERA NOMINATO
+
+   Cloudflare c'era gia' come hosting. Ho specificato che raccoglie anche
+   le statistiche di traffico, senza cookie e senza tracciare fra siti
+   diversi — che e' quello che la policy dichiarava piu' sopra, ma senza
+   dire chi lo facesse.
+
+QUELLO CHE NON HO TOCCATO
+-------------------------
+Il resto della policy. Non sono un avvocato e quelle dichiarazioni parlano
+a nome di Matteo: ho corretto solo cio' che il codice del sito smentiva.
+
+ACCESSIBILITA': 86/100
+----------------------
+Misurata, invariata. Nessun rilievo bloccante. Manca il link "salta al
+contenuto" (9 pagine), l'elemento <main> (9 pagine), l'avviso sui link
+che aprono una scheda nuova (10 pagine) e tre salti di livello nei titoli.
+
+Non l'ho corretta: e' un lavoro a parte. Si arriva a 100 come sugli altri
+due, quando vuoi.

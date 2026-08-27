@@ -13,8 +13,8 @@
     --color-gold: #d4a853;
     --color-text: #f5f0e8;
     --color-text-muted: #a89b8c;
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'Source Sans 3', -apple-system, sans-serif;
+    --font-display: Georgia, 'Times New Roman', 'Iowan Old Style', 'Noto Serif', serif;
+    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 2rem;
